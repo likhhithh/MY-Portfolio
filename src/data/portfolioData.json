@@ -1,11 +1,16 @@
 {
-  "hero": {
-    "name": "Likhith M",
-    "title": "Electrical Engineer  |  ML & AI Enthusiast",
-    "tagline": "Building intelligent systems at the intersection of Machine Learning and Electrical Engineering.",
-    "resumeLink": "/Resume - ML.pdf",
-    "greeting": "Hi, I'm"
-  },
+ "hero": {
+  "name": "Likhith M",
+  "title": "Electrical Engineer  |  ML & AI Enthusiast",
+  "tagline": "Building intelligent systems at the intersection of Machine Learning and Electrical Engineering.",
+  "resumeLink": "/resume.pdf",
+  "greeting": "Hi, I'm",
+  "openTo": [
+    "AI/ML Internships",
+    "Data Science Roles",
+    "Software Engineering Roles"
+  ]
+},
 
   "about": {
     "description": "I'm a Pre final-year Electrical Engineering student with Minor in Computer Science, with a deep passion for Machine Learning and Artificial Intelligence. I love bridging the gap between hardware and intelligent software — from designing control systems to building ML pipelines that solve real-world problems. I've worked on projects spanning computer vision, signal processing, and predictive modelling, and I'm always looking for opportunities to apply engineering principles to data-driven challenges.",
