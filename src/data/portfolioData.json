@@ -1,0 +1,120 @@
+{
+  "hero": {
+    "name": "Malothu Likhith",
+    "title": "Electrical Engineer  |  ML & AI Enthusiast",
+    "tagline": "Building intelligent systems at the intersection of Machine Learning and Electrical Engineering.",
+    "resumeLink": "/resume.pdf",
+    "greeting": "Hi, I'm"
+  },
+
+  "about": {
+    "description": "I'm a Pre final-year Electrical Engineering student with Minor in Computer Science, with a deep passion for Machine Learning and Artificial Intelligence. I love bridging the gap between hardware and intelligent software — from designing control systems to building ML pipelines that solve real-world problems. I've worked on projects spanning computer vision, signal processing, and predictive modelling, and I'm always looking for opportunities to apply engineering principles to data-driven challenges.",
+    "highlights": [
+      "🎓 B.Tech in Electrical Engineering & Minor in Computer Science",
+      "🤖 Passionate about ML, Computer Vision & AI",
+      "🌱 Currently exploring RAG,GenAI & LLMs"
+    ],
+    "image": "https://drive.google.com/file/d/1bJ1vnOdDZ4KIHuVCdh0fI2XfwwHTTIwa/view?usp=sharing"
+  },
+
+  "skills": {
+    "Programming": ["Python", "C++", "C"],
+    "Machine Learning": ["Scikit-learn", "TensorFlow", "Keras", "OpenCV", "Pandas", "NumPy","PyTorch"],
+    "Deep Learning": ["CNNs", "RNNs", "Transformers"],
+    "NLP & GEN AI": ["Natural Language Processing", "Large Language Models", "Prompt Engineering"],
+    "Electrical": ["Control Systems", "Power Systems", "Signal Processing", "Circuit Design"],
+    "Tools & Platforms": ["Git", "GitHub", "VS Code", "Jupyter", "Google Colab", "Linux"]
+  },
+
+  "projects": [
+    {
+      "title": "Face Morphing Attack Detection",
+      "description": "Developed an ML pipeline to detect face morphing attacks in biometric systems using a combination of Local Binary Patterns (LBP) and Discrete Cosine Transform (DCT) features fed into an SVM classifier. Achieved high accuracy on standard morphing attack datasets.",
+      "tech": ["Python", "OpenCV", "Scikit-learn", "SVM", "LBP", "DCT"],
+      "github": "https://github.com/likhhithh",
+      "demo": "",
+      "image": "",
+      "featured": true
+    },
+    {
+      "title": "Power System Fault Detection",
+      "description": "Built a machine learning model to classify and detect faults in electrical power transmission lines using current and voltage signal features. Used Random Forest and SVM classifiers with MATLAB-generated datasets.",
+      "tech": ["Python", "MATLAB", "Scikit-learn", "Pandas", "Signal Processing"],
+      "github": "https://github.com/likhhithh",
+      "demo": "",
+      "image": "",
+      "featured": true
+    },
+    {
+      "title": "Object Detection & Tracking System",
+      "description": "Implemented a real-time object detection and tracking system using OpenCV and a pre-trained YOLO model. The system can track multiple objects across video frames with bounding box annotations and confidence scores.",
+      "tech": ["Python", "OpenCV", "YOLO", "NumPy", "Computer Vision"],
+      "github": "https://github.com/likhhithh",
+      "demo": "",
+      "image": "",
+      "featured": false
+    },
+    {
+      "title": "PID Controller Simulation",
+      "description": "Designed and simulated a PID controller for a DC motor speed control system in MATLAB/Simulink. Analysed system response, tuned controller parameters, and compared performance across P, PI, and PID configurations.",
+      "tech": ["MATLAB", "Simulink", "Control Systems", "PID Tuning"],
+      "github": "https://github.com/likhhithh",
+      "demo": "",
+      "image": "",
+      "featured": false
+    }
+  ],
+
+  "experience": [
+    {
+      "role": "Machine Learning Intern",
+      "company": "Tech Organisation / Research Lab",
+      "duration": "May 2024 – July 2024",
+      "description": "Worked on building and evaluating supervised ML models for classification tasks. Preprocessed datasets, performed feature engineering, and visualised model performance metrics using Python libraries.",
+      "type": "internship"
+    },
+    {
+      "role": "Research Project — Face Morphing Detection",
+      "company": "College Final Year Project",
+      "duration": "Aug 2024 – Present",
+      "description": "Leading development of a biometric security system that detects morphing attacks on passport-style face images. Implemented feature extraction pipelines and benchmarked multiple classifiers.",
+      "type": "project"
+    },
+    {
+      "role": "IEEE Student Member",
+      "company": "IEEE — Institute of Electrical and Electronics Engineers",
+      "duration": "2022 – Present",
+      "description": "Active member of the IEEE student chapter. Participated in technical workshops, paper presentations, and collaborative projects focused on emerging technologies in electrical and computer engineering.",
+      "type": "volunteering"
+    }
+  ],
+
+  "education": [
+    {
+      "degree": "B.Tech — Electrical & Electronics Engineering",
+      "institution": "Indian Institute of Technology (IIT) — Bhilai",
+      "duration": "2022 – 2027",
+      "grade": "CGPA: "
+    },
+    {
+      "degree": "Minor in Computer Science ",
+      "institution": "Indian Institute of Technology (IIT) — Mandi",
+      "duration": "2025 – 2026",
+      "grade": "CGPA: 9.02"
+    }
+  ],
+
+  "contact": {
+    "email": "malothulikhith@email.com",
+    "github": "https://github.com/likhhithh",
+    "linkedin": "https://linkedin.com/in/likhithmalothu01",
+    "twitter": "",
+    "location": "India"
+  },
+
+  "meta": {
+    "siteTitle": "Malothu Likhith | Portfolio",
+    "siteDescription": "Electrical Engineer & AI/ML Enthusiast — Portfolio",
+    "copyright": "2025 Malothu Likhith"
+  }
+}
