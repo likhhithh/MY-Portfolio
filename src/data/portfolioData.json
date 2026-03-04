@@ -1,81 +1,81 @@
 {
- "hero": {
-  "name": "Likhith M",
-  "title": "Electrical Engineer  |  ML & AI Enthusiast",
-  "tagline": "Building intelligent systems at the intersection of Machine Learning and Electrical Engineering.",
-  "resumeLink": "/Resume - ML.pdf",
-  "greeting": "Hi, ",
-  "openTo": [
-    "AI/ML",
-    "Data Science ",
-    "Software Engineering",
-   "Gen AI & RAG"
-  ]
-},
+  "hero": {
+    "name": "Likhith M",
+    "title": "Electrical Engineer | ML & AI Enthusiast",
+    "tagline": "Building intelligent systems at the intersection of Machine Learning and Electrical Engineering.",
+    "resumeLink": "/Resume - ML.pdf",
+    "greeting": "Hi,",
+    "openTo": [
+      "AI/ML",
+      "Data Science",
+      "Software Engineering",
+      "Gen AI & RAG"
+    ]
+  },
 
   "about": {
-    "description": "I'm a Pre final-year Electrical Engineering student with Minor in Computer Science, with a deep passion for Machine Learning and Artificial Intelligence. I love bridging the gap between hardware and intelligent software — from designing control systems to building ML pipelines that solve real-world problems. I've worked on projects spanning computer vision, signal processing, and predictive modelling, and I'm always looking for opportunities to apply engineering principles to data-driven challenges.",
+    "description": "I'm a pre-final year Electrical Engineering student with a Minor in Computer Science and a deep passion for Machine Learning and Artificial Intelligence. I enjoy bridging the gap between hardware and intelligent software — from designing control systems to building ML pipelines that solve real-world problems. I've worked on projects spanning computer vision, signal processing, and predictive modelling, and I'm always looking for opportunities to apply engineering principles to data-driven challenges.",
     "highlights": [
       "🎓 B.Tech in Electrical Engineering & Minor in Computer Science",
-      "🤖 Passionate about AI/ML , DL & GenAI",
-      "🌱 Currently exploring RAG,GenAI & LLMs"
+      "🤖 Passionate about AI/ML, DL & GenAI",
+      "🌱 Currently exploring RAG, GenAI & LLMs"
     ],
     "image": "/profile.png"
   },
 
   "skills": {
-  "Programming": [
-    "Python",
-    "C++",
-    "C",
-    "JavaScript"
-  ],
+    "Programming": [
+      "Python",
+      "C++",
+      "C",
+      "JavaScript"
+    ],
 
-  "Machine Learning": [
-    "Scikit-learn",
-    "Pandas",
-    "NumPy",
-    "OpenCV",
-    "Matplotlib"
-  ],
+    "Machine Learning": [
+      "Scikit-learn",
+      "Pandas",
+      "NumPy",
+      "OpenCV",
+      "Matplotlib"
+    ],
 
-  "Deep Learning": [
-    "TensorFlow",
-    "Keras",
-    "PyTorch",
-    "CNNs",
-    "RNNs",
-    "Transformers"
-  ],
+    "Deep Learning": [
+      "TensorFlow",
+      "Keras",
+      "PyTorch",
+      "CNNs",
+      "RNNs",
+      "Transformers"
+    ],
 
-  "NLP & GenAI": [
-    "Natural Language Processing",
-    "Large Language Models (LLMs)",
-    "Prompt Engineering",
-    "LangChain",
-    "Retrieval Augmented Generation (RAG)"
-  ],
+    "NLP & GenAI": [
+      "Natural Language Processing",
+      "Large Language Models (LLMs)",
+      "Prompt Engineering",
+      "LangChain",
+      "Retrieval Augmented Generation (RAG)"
+    ],
 
-  "Vector Databases": [
-    "ChromaDB"
-  ],
+    "Vector Databases": [
+      "ChromaDB"
+    ],
 
-  "Electrical Engineering": [
-    "Control Systems",
-    "Power Systems",
-    "Signal Processing",
-    "Circuit Design"
-  ],
+    "Electrical Engineering": [
+      "Control Systems",
+      "Power Systems",
+      "Signal Processing",
+      "Circuit Design"
+    ],
 
-  "Tools & Platforms": [
-    "Git",
-    "GitHub",
-    "VS Code",
-    "Jupyter Notebook",
-    "Google Colab",
-    "Linux"
-  ]
-},
+    "Tools & Platforms": [
+      "Git",
+      "GitHub",
+      "VS Code",
+      "Jupyter Notebook",
+      "Google Colab",
+      "Linux"
+    ]
+  },
 
   "projects": [
     {
@@ -83,26 +83,26 @@
       "description": "Developed an ML pipeline to predict the remaining useful life of solar panels using time-series data and regression models. Implemented feature engineering and model evaluation techniques to improve prediction accuracy.",
       "tech": ["Python", "Scikit-learn", "Pandas", "NumPy", "Matplotlib"],
       "github": "https://github.com/likhhithh",
-      "demo": "",
-      "image": "",
+      "demo": null,
+      "image": null,
       "featured": true
     },
     {
       "title": "AI Study Companion – RAG Chatbot",
       "description": "Designed a Retrieval-Augmented Generation (RAG) pipeline for academic PDF Q&A, leveraging embedding models and ChromaDB for high-precision semantic vector search and document retrieval.",
-      "tech": ["Python","LangChain","ChromaDB","Hugging Face","FastAPI","Streamlit"],
+      "tech": ["Python", "LangChain", "ChromaDB", "Hugging Face", "FastAPI", "Streamlit"],
       "github": "https://github.com/likhhithh",
-      "demo": "",
-      "image": "",
+      "demo": null,
+      "image": null,
       "featured": true
     },
     {
       "title": "B-FIT: Fitness Tracking Web App",
-      "description": "Developed a web application for tracking fitness activities using a combination of Python, Flask, and OpenCV. The app allows users to upload workout videos and tracks their movements using a pre-trained YOLO model.",
+      "description": "Developed a web application for tracking fitness activities with a MERN stack architecture enabling user workout logging and performance tracking.",
       "tech": ["MongoDB", "Express.js", "React.js", "Node.js"],
       "github": "https://github.com/likhhithh",
-      "demo": "",
-      "image": "",
+      "demo": null,
+      "image": null,
       "featured": false
     }
   ],
@@ -112,7 +112,7 @@
       "role": "Web Development Intern",
       "company": "Basil Infotech Pvt Ltd",
       "duration": "May 2025 – August 2025",
-      "description": "Built a Smart Hospital Management System(MERN stack) with real-time ambulance tracking, doctor booking, and prescription management for 200+ records.",
+      "description": "Built a Smart Hospital Management System (MERN stack) with real-time ambulance tracking, doctor booking, and prescription management for 200+ records.",
       "type": "internship"
     }
   ],
@@ -122,10 +122,10 @@
       "degree": "B.Tech — Electrical & Electronics Engineering",
       "institution": "Indian Institute of Technology (IIT) — Bhilai",
       "duration": "2022 – 2027",
-      "grade": "CGPA: 7.20 "
+      "grade": "CGPA: 7.20"
     },
     {
-      "degree": "Minor in Computer Science ",
+      "degree": "Minor in Computer Science",
       "institution": "Indian Institute of Technology (IIT) — Mandi",
       "duration": "2025 – 2026",
       "grade": "CGPA: 9.02"
