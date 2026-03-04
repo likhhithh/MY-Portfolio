@@ -4,7 +4,7 @@
   "title": "Electrical Engineer  |  ML & AI Enthusiast",
   "tagline": "Building intelligent systems at the intersection of Machine Learning and Electrical Engineering.",
   "resumeLink": "/Resume - ML.pdf",
-  "greeting": "Hi, I'm",
+  "greeting": "Hi, ",
   "openTo": [
     "AI/ML",
     "Data Science ",
@@ -24,13 +24,58 @@
   },
 
   "skills": {
-    "Programming": ["Python", "C++", "C","JS"],
-    "Machine Learning": ["Scikit-learn", "TensorFlow", "Keras", "OpenCV", "Pandas", "NumPy","PyTorch"],
-    "Deep Learning": ["CNNs", "RNNs", "Transformers"],
-    "NLP & GEN AI": ["Natural Language Processing", "Large Language Models", "Prompt Engineering"],
-    "Electrical": ["Control Systems", "Power Systems", "Signal Processing", "Circuit Design"],
-    "Tools & Platforms": ["Git", "GitHub", "VS Code", "Jupyter", "Google Colab", "Linux"]
-  },
+  "Programming": [
+    "Python",
+    "C++",
+    "C",
+    "JavaScript"
+  ],
+
+  "Machine Learning": [
+    "Scikit-learn",
+    "Pandas",
+    "NumPy",
+    "OpenCV",
+    "Matplotlib"
+  ],
+
+  "Deep Learning": [
+    "TensorFlow",
+    "Keras",
+    "PyTorch",
+    "CNNs",
+    "RNNs",
+    "Transformers"
+  ],
+
+  "NLP & GenAI": [
+    "Natural Language Processing",
+    "Large Language Models (LLMs)",
+    "Prompt Engineering",
+    "LangChain",
+    "Retrieval Augmented Generation (RAG)"
+  ],
+
+  "Vector Databases": [
+    "ChromaDB"
+  ],
+
+  "Electrical Engineering": [
+    "Control Systems",
+    "Power Systems",
+    "Signal Processing",
+    "Circuit Design"
+  ],
+
+  "Tools & Platforms": [
+    "Git",
+    "GitHub",
+    "VS Code",
+    "Jupyter Notebook",
+    "Google Colab",
+    "Linux"
+  ]
+}
 
   "projects": [
     {
