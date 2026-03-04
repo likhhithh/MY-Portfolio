@@ -6,9 +6,10 @@
   "resumeLink": "/Resume - ML.pdf",
   "greeting": "Hi, I'm",
   "openTo": [
-    "AI/ML Internships",
-    "Data Science Roles",
-    "Software Engineering Roles"
+    "AI/ML",
+    "Data Science ",
+    "Software Engineering",
+   "Gen AI & RAG"
   ]
 },
 
