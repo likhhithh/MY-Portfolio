@@ -221,7 +221,7 @@ export const projects: Project[] = [
   },
   {
     slug: "solar-panel-rul",
-    title: "Solar Panel RUL Prediction",
+    title: "SolarSense",
     tagline: "ML pipeline to predict remaining useful life of solar panels",
     description:
       "Developed an ML pipeline to predict the remaining useful life of solar panels using time-series data and regression models. Implemented feature engineering and model evaluation techniques to improve prediction accuracy.",
@@ -229,6 +229,7 @@ export const projects: Project[] = [
     featured: true,
     wip: false,
     github: "https://github.com/likhhithh",
+    live: "https://solar-sense-e8x4.onrender.com",
     year: "2024",
     category: "ML / Data Science",
     caseStudy: {
@@ -313,6 +314,15 @@ export interface ExperienceEntry {
 }
 
 export const experience: ExperienceEntry[] = [
+  {
+    role: "AIML Intern",
+    company: "APTRANSCO",
+    type: "Internship",
+    duration: "May 2026 – Present",
+    description:
+      "Building a Hybrid RAG Chatbot for APTRANSCO (Andhra Pradesh Transmission Corporation) that combines dense vector retrieval with keyword-based BM25 search to answer queries over internal technical documents and manuals. The system uses LangChain, ChromaDB, and a fine-tuned LLM to deliver accurate, source-cited responses — reducing manual document lookup time for engineers.",
+    tech: ["Python", "LangChain", "ChromaDB", "RAG", "LLMs", "FastAPI"],
+  },
   {
     role: "Web Development Intern",
     company: "Basil Infotech Pvt Ltd",

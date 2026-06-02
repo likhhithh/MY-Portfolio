@@ -20,7 +20,7 @@ export default function CustomCursor() {
 
     const onEnter = (e: Event) => {
       const el = e.target as HTMLElement;
-      if (el.closest("a, button, [data-cursor-scale]")) setHovered(true);
+      if (el && typeof el.closest === "function" && el.closest("a, button, [data-cursor-scale]")) setHovered(true);
     };
     const onLeave = () => setHovered(false);
 
