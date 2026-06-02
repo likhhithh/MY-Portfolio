@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ServicesMarquee from "@/components/ServicesMarquee";
 import AboutSection from "@/components/AboutSection";
+import ExperienceSection from "@/components/ExperienceSection";
 import FeaturedProjects from "@/components/FeaturedProjects";
 import FAQ from "@/components/FAQ";
 import BlogSection from "@/components/BlogSection";
@@ -15,6 +16,7 @@ export default function HomePage() {
       <Hero />
       <ServicesMarquee />
       <AboutSection />
+      <ExperienceSection />
       <FeaturedProjects />
       <FAQ />
       <BlogSection />

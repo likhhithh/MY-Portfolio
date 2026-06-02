@@ -9,7 +9,7 @@ export const siteConfig = {
   email: "malothulikhith@email.com",
   location: "India",
   availableForWork: true,
-  resume: "/resume.pdf",
+  resume: "/likhith_ai.pdf",
   greeting: "Hi,",
 };
 
@@ -106,13 +106,24 @@ export const skillCategories: SkillCategory[] = [
       { name: "LLMs",              logo: "llm" },
       { name: "Prompt Engineering", logo: "prompt" },
       { name: "LangChain",         logo: "langchain" },
+      { name: "LangGraph",         logo: "langgraph" },
+      { name: "LlamaIndex",        logo: "llamaindex" },
       { name: "RAG",               logo: "rag" },
     ],
   },
   {
     category: "Vector Databases",
     skills: [
+      { name: "Qdrant",   logo: "qdrant" },
       { name: "ChromaDB", logo: "chromadb" },
+    ],
+  },
+  {
+    category: "Cloud & AI Services",
+    skills: [
+      { name: "AWS Bedrock",    logo: "awsbedrock" },
+      { name: "Amazon Titan",   logo: "amazontitan" },
+      { name: "Cohere",         logo: "cohere" },
     ],
   },
   {
@@ -124,6 +135,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "Jupyter",         logo: "jupyter" },
       { name: "Google Colab",    logo: "colab" },
       { name: "Linux",           logo: "linux" },
+      { name: "Apache Spark",    logo: "spark" },
     ],
   },
   {
@@ -135,6 +147,9 @@ export const skillCategories: SkillCategory[] = [
       { name: "MongoDB",    logo: "mongodb" },
       { name: "Express.js", logo: "express" },
       { name: "Streamlit",  logo: "streamlit" },
+      { name: "Supabase",   logo: "supabase" },
+      { name: "PostgreSQL", logo: "postgresql" },
+      { name: "Vite",       logo: "vite" },
     ],
   },
 ];
@@ -163,6 +178,36 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    slug: "aptransco-rag-chatbot",
+    title: "APTRANSCO Hybrid RAG Chatbot",
+    tagline: "Enterprise AI document intelligence platform for a power utility",
+    description:
+      "A production-grade Hybrid RAG Chatbot built for Andhra Pradesh Transmission Corporation (APTRANSCO) that lets employees query 10,000+ internal documents — technical manuals, CEA guidelines, safety regulations, HR policies — in plain English. Features a 6-node LangGraph agentic pipeline, Qdrant + BM25 hybrid retrieval with Cohere reranking, cross-session memory layer, Supabase auth, and a PDF.js viewer that highlights exact retrieved passages on the source document.",
+    tech: ["Python", "FastAPI", "LangGraph", "LangChain", "LlamaIndex", "AWS Bedrock", "Amazon Titan", "Qdrant", "BM25", "Cohere Rerank", "React.js", "Vite", "Supabase", "PostgreSQL", "PDF.js"],
+    featured: true,
+    wip: false,
+    year: "2026",
+    category: "AI / Enterprise",
+    caseStudy: {
+      problem:
+        "APTRANSCO engineers and HR staff waste hours manually searching across hundreds of siloed PDFs — technical manuals, CEA standards, safety rules, office orders — to find answers. Keyword search is too shallow; important passages get missed or require knowing the exact document.",
+      approach:
+        "Built a 6-node LangGraph agentic pipeline: a router LLM selects the right collections from 19 Qdrant collections, a retrieval agent fuses dense vector search (Amazon Titan 1024-dim embeddings) with BM25 keyword retrieval via Reciprocal Rank Fusion, Cohere Rerank v3 surfaces the best chunks, a verification agent guards against hallucinations, and a response agent generates structured answers with inline citations. A cross-session Qdrant-backed memory layer persists verified Q&A pairs per user for context-aware multi-session dialogue. The frontend is React 19 + Vite with Supabase auth and a PDF.js viewer that fuzzy-matches and highlights exact retrieved passages.",
+      outcome:
+        "Full-stack enterprise AI assistant capable of answering complex multi-document queries with source citations, page-level PDF highlighting, cross-session memory, and sub-5-second response times. Deployed internally at APTRANSCO for pilot use.",
+      highlights: [
+        "6-node LangGraph agentic workflow (Route → Retrieve → Verify → Respond + Memory R/W)",
+        "Hybrid retrieval: Qdrant vector search + BM25 merged via Reciprocal Rank Fusion",
+        "Cohere Rerank v3 cross-encoder reranking across 19 document collections",
+        "Cross-session memory layer: per-user Qdrant store, similarity threshold 0.72, ~0.3s latency",
+        "PDF.js viewer highlights exact retrieved passage on source document canvas",
+        "Supabase auth (email, magic link, Google OAuth) + PostgreSQL with RLS",
+        "Anti-hallucination verification agent before every response",
+        "React 19 + Vite frontend with typewriter animation and lazy-loaded chat history",
+      ],
+    },
+  },
   {
     slug: "samachr-ai",
     title: "Samachr AI",
@@ -320,8 +365,8 @@ export const experience: ExperienceEntry[] = [
     type: "Internship",
     duration: "May 2026 – Present",
     description:
-      "Building a Hybrid RAG Chatbot for APTRANSCO (Andhra Pradesh Transmission Corporation) that combines dense vector retrieval with keyword-based BM25 search to answer queries over internal technical documents and manuals. The system uses LangChain, ChromaDB, and a fine-tuned LLM to deliver accurate, source-cited responses — reducing manual document lookup time for engineers.",
-    tech: ["Python", "LangChain", "ChromaDB", "RAG", "LLMs", "FastAPI"],
+      "Building an enterprise-grade Hybrid RAG Chatbot for Andhra Pradesh Transmission Corporation (APTRANSCO) that lets employees query 10,000+ internal documents — technical manuals, CEA guidelines, HR policies, safety regulations, office orders — in plain English. Designed and implemented a 6-node LangGraph agentic pipeline: a router agent selects relevant Qdrant collections, a retrieval agent fuses dense vector search (Amazon Titan Text V2 embeddings, 1024-dim) with BM25 keyword retrieval via Reciprocal Rank Fusion, a Cohere Rerank v3 cross-encoder reranks the merged results, a verification agent checks answer groundedness (hallucination guard), and a response agent generates structured answers with inline citations. Built a cross-session memory layer backed by a dedicated Qdrant collection — verified Q&A pairs are embedded and stored per user, retrieved at query time (similarity ≥ 0.72, top-4) and injected as supplementary context, enabling context-aware multi-session dialogue with only ~0.3s added latency. The full-stack product features a React 19 + Vite frontend with a 3-panel layout (document navigator, chat, sources), typewriter-animated AI responses, Supabase-backed auth (email/password, magic link, Google OAuth), lazy-loaded conversation history stored in PostgreSQL (RLS-enforced), and a PDF.js viewer that highlights the exact retrieved passage on the source document canvas using fuzzy text matching.",
+    tech: ["Python", "FastAPI", "LangGraph", "LangChain", "LlamaIndex", "AWS Bedrock", "Amazon Titan", "Qdrant", "BM25", "Cohere Rerank", "React.js", "Vite", "Supabase", "PostgreSQL", "PDF.js"],
   },
   {
     role: "Web Development Intern",
@@ -401,6 +446,15 @@ export interface Post {
 }
 
 export const posts: Post[] = [
+  {
+    slug: "aptransco-hybrid-rag-chatbot",
+    title: "Building an Enterprise Hybrid RAG Chatbot for APTRANSCO",
+    excerpt:
+      "How I designed and built a production-grade document intelligence platform for a state power utility — a 6-node LangGraph agentic pipeline, Qdrant + BM25 hybrid retrieval with Cohere reranking, a cross-session memory layer, and a PDF.js viewer that highlights exact retrieved passages. A deep-dive into every architectural decision.",
+    date: "2026-06-02",
+    readTime: "12 min",
+    tags: ["RAG", "LangGraph", "AWS Bedrock", "Enterprise AI", "Qdrant"],
+  },
   {
     slug: "building-rag-pipeline",
     title: "Building a RAG Pipeline from Scratch",
