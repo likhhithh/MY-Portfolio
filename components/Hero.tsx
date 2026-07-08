@@ -26,6 +26,10 @@ export default function Hero() {
   return (
     <section className="relative bg-bg overflow-hidden">
 
+      {/* Backdrop: dotted grid + accent glow */}
+      <div className="absolute inset-0 hero-grid pointer-events-none" aria-hidden />
+      <div className="absolute inset-0 hero-glow pointer-events-none" aria-hidden />
+
       {/* Floating "Hi" badge */}
       <motion.div
         initial={{ scale: 0, opacity: 0 }}
@@ -36,7 +40,7 @@ export default function Hero() {
         Hi 👋
       </motion.div>
 
-      <div className="container-main pt-28 pb-0">
+      <div className="container-main relative pt-28 pb-0">
 
         {/* Availability badge */}
         <motion.div
@@ -65,7 +69,7 @@ export default function Hero() {
               className="display-heading text-fg leading-none"
               style={{ fontSize: "clamp(4rem, 11vw, 12rem)" }}
             >
-              LIKHITH M
+              LIKHITH
             </h1>
           </motion.div>
 
@@ -74,8 +78,8 @@ export default function Hero() {
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-            className="flex-1 md:text-right overflow-hidden"
-            style={{ minHeight: "clamp(4rem, 11vw, 12rem)" }}
+            className="flex-1 md:text-right"
+            style={{ minHeight: "calc(clamp(4rem, 11vw, 12rem) * 2.1)" }}
           >
             <AnimatePresence mode="wait">
               <motion.h1
@@ -84,11 +88,8 @@ export default function Hero() {
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: "-100%", opacity: 0 }}
                 transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                className="display-heading leading-none"
-                style={{
-                  fontSize: "clamp(4rem, 11vw, 12rem)",
-                  color: roleIndex === 0 ? "#5e67e6" : "#303030",
-                }}
+                className="display-heading leading-none text-accent"
+                style={{ fontSize: "clamp(4rem, 11vw, 12rem)" }}
               >
                 {roles[roleIndex]}
               </motion.h1>
@@ -150,7 +151,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.7 }}
-        className="bg-bg-alt border-t border-border mt-10 overflow-hidden"
+        className="relative bg-bg-alt border-t border-border mt-10 overflow-hidden"
       >
         <div className="flex py-5 marquee-outer">
           <div className="flex items-center marquee-inner">

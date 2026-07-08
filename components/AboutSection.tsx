@@ -22,7 +22,7 @@ export default function AboutSection() {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="mb-14"
         >
-          <p className="eyebrow mb-4">About Me</p>
+          <p className="eyebrow mb-4">Get to know me</p>
           <h2 className="section-heading text-fg">ABOUT ME</h2>
         </motion.div>
 

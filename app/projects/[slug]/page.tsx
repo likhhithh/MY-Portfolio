@@ -118,7 +118,7 @@ export default async function ProjectDetailPage({
             </p>
 
             {/* Highlights */}
-            <div className="h-divider mt-8 pt-8">
+            <div className="mt-8 pt-8 border-t border-[#E0DCD2]">
               <p className="eyebrow mb-4">highlights</p>
               <ul className="flex flex-col gap-3">
                 {project.caseStudy.highlights.map((item, i) => (

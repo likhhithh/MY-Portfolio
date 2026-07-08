@@ -5,11 +5,11 @@ export const siteConfig = {
   fullName: "Malothu Likhith",
   title: "Electrical Engineer | ML & AI Enthusiast",
   tagline: "Building intelligent systems at the intersection of Machine Learning and Electrical Engineering.",
-  description: "I'm a pre-final year Electrical Engineering student with a Minor in Computer Science and a deep passion for Machine Learning and Artificial Intelligence. I enjoy bridging the gap between hardware and intelligent software — from designing control systems to building ML pipelines that solve real-world problems.",
-  email: "malothulikhith@email.com",
+  description: "I'm a final year Electrical Engineering student with a Minor in Computer Science and a deep passion for Machine Learning and Artificial Intelligence. I enjoy bridging the gap between hardware and intelligent software — from designing control systems to building ML pipelines that solve real-world problems.",
+  email: "malothulikhith@gmail.com",
   location: "India",
   availableForWork: true,
-  resume: "/likhith_ai.pdf",
+  resume: "/Likhith_Resume.pdf",
   greeting: "Hi,",
 };
 
@@ -23,7 +23,7 @@ export const navItems = [
 export const socials = {
   github:   "https://github.com/likhhithh",
   linkedin: "https://linkedin.com/in/likhithmalothu01",
-  email:    "malothulikhith@email.com",
+  email:    "malothulikhith@gmail.com",
   twitter:  "",
 };
 
@@ -40,14 +40,14 @@ export const heroStats = [
 // ── About ─────────────────────────────────────────────────────────────────────
 
 export const aboutText = [
-  "I'm a pre-final year Electrical Engineering student with a Minor in Computer Science and a deep passion for Machine Learning and Artificial Intelligence.",
-  "I enjoy bridging the gap between hardware and intelligent software — from designing control systems to building ML pipelines that solve real-world problems. I've worked on projects spanning computer vision, signal processing, and predictive modelling.",
+  "I'm a final year Electrical Engineering student with a Minor in Computer Science and a deep passion for Machine Learning and Artificial Intelligence.",
+  "I enjoy bridging the gap between hardware and intelligent software — from designing control systems to building ML pipelines that solve real-world problems. I've worked on projects spanning RAG pipelines, generative AI, computer vision, and predictive modelling.",
 ];
 
 export const highlights = [
   "B.Tech in Electrical & Electronics Engineering + Minor in Computer Science",
   "Passionate about AI/ML, Deep Learning & GenAI",
-  "Currently exploring RAG, GenAI & LLMs",
+  "Built production RAG systems, agentic pipelines & LLM-powered apps",
 ];
 
 export const metrics = [
@@ -109,6 +109,19 @@ export const skillCategories: SkillCategory[] = [
       { name: "LangGraph",         logo: "langgraph" },
       { name: "LlamaIndex",        logo: "llamaindex" },
       { name: "RAG",               logo: "rag" },
+      { name: "MCP",               logo: "mcp" },
+      { name: "FastMCP",           logo: "fastmcp" },
+    ],
+  },
+  {
+    category: "Fine-Tuning & LLMOps",
+    skills: [
+      { name: "Fine-Tuning",      logo: "finetuning" },
+      { name: "QLoRA",            logo: "qlora" },
+      { name: "PEFT / LoRA",      logo: "peft" },
+      { name: "BitsAndBytes",     logo: "bitsandbytes" },
+      { name: "Hugging Face Hub", logo: "huggingface" },
+      { name: "Model Evaluation", logo: "evaluation" },
     ],
   },
   {
@@ -122,8 +135,10 @@ export const skillCategories: SkillCategory[] = [
     category: "Cloud & AI Services",
     skills: [
       { name: "AWS Bedrock",    logo: "awsbedrock" },
+      { name: "AWS EC2",        logo: "awsec2" },
       { name: "Amazon Titan",   logo: "amazontitan" },
       { name: "Cohere",         logo: "cohere" },
+      { name: "CUDA",           logo: "cuda" },
     ],
   },
   {
@@ -179,67 +194,8 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    slug: "aptransco-rag-chatbot",
-    title: "APTRANSCO Hybrid RAG Chatbot",
-    tagline: "Enterprise AI document intelligence platform for a power utility",
-    description:
-      "A production-grade Hybrid RAG Chatbot built for Andhra Pradesh Transmission Corporation (APTRANSCO) that lets employees query 10,000+ internal documents — technical manuals, CEA guidelines, safety regulations, HR policies — in plain English. Features a 6-node LangGraph agentic pipeline, Qdrant + BM25 hybrid retrieval with Cohere reranking, cross-session memory layer, Supabase auth, and a PDF.js viewer that highlights exact retrieved passages on the source document.",
-    tech: ["Python", "FastAPI", "LangGraph", "LangChain", "LlamaIndex", "AWS Bedrock", "Amazon Titan", "Qdrant", "BM25", "Cohere Rerank", "React.js", "Vite", "Supabase", "PostgreSQL", "PDF.js"],
-    featured: true,
-    wip: false,
-    year: "2026",
-    category: "AI / Enterprise",
-    caseStudy: {
-      problem:
-        "APTRANSCO engineers and HR staff waste hours manually searching across hundreds of siloed PDFs — technical manuals, CEA standards, safety rules, office orders — to find answers. Keyword search is too shallow; important passages get missed or require knowing the exact document.",
-      approach:
-        "Built a 6-node LangGraph agentic pipeline: a router LLM selects the right collections from 19 Qdrant collections, a retrieval agent fuses dense vector search (Amazon Titan 1024-dim embeddings) with BM25 keyword retrieval via Reciprocal Rank Fusion, Cohere Rerank v3 surfaces the best chunks, a verification agent guards against hallucinations, and a response agent generates structured answers with inline citations. A cross-session Qdrant-backed memory layer persists verified Q&A pairs per user for context-aware multi-session dialogue. The frontend is React 19 + Vite with Supabase auth and a PDF.js viewer that fuzzy-matches and highlights exact retrieved passages.",
-      outcome:
-        "Full-stack enterprise AI assistant capable of answering complex multi-document queries with source citations, page-level PDF highlighting, cross-session memory, and sub-5-second response times. Deployed internally at APTRANSCO for pilot use.",
-      highlights: [
-        "6-node LangGraph agentic workflow (Route → Retrieve → Verify → Respond + Memory R/W)",
-        "Hybrid retrieval: Qdrant vector search + BM25 merged via Reciprocal Rank Fusion",
-        "Cohere Rerank v3 cross-encoder reranking across 19 document collections",
-        "Cross-session memory layer: per-user Qdrant store, similarity threshold 0.72, ~0.3s latency",
-        "PDF.js viewer highlights exact retrieved passage on source document canvas",
-        "Supabase auth (email, magic link, Google OAuth) + PostgreSQL with RLS",
-        "Anti-hallucination verification agent before every response",
-        "React 19 + Vite frontend with typewriter animation and lazy-loaded chat history",
-      ],
-    },
-  },
-  {
-    slug: "samachr-ai",
-    title: "Samachr AI",
-    tagline: "AI-powered news intelligence platform — live at samachr.in",
-    description:
-      "An AI-powered news intelligence platform that aggregates, summarises, and personalises news using large language models. Built with a full-stack architecture, it delivers real-time, context-aware news briefs.",
-    tech: ["Python", "LLMs", "RAG", "FastAPI", "React.js", "Node.js"],
-    featured: true,
-    wip: true,
-    github: undefined,
-    live: "https://www.samachr.in",
-    image: "/samachr-logo.png",
-    year: "2025",
-    category: "AI / Full-Stack",
-    caseStudy: {
-      problem:
-        "News consumption is fragmented and overwhelming. Readers spend more time searching than reading.",
-      approach:
-        "Built a full-stack pipeline that ingests, summarises, and personalises news using LLMs and RAG so readers see only what matters to them.",
-      outcome:
-        "Live at samachr.in with real-time news ingestion and LLM-powered summaries.",
-      highlights: [
-        "LLM-powered abstractive news summarisation",
-        "RAG pipeline for context-aware retrieval",
-        "Full-stack: FastAPI backend + React.js frontend",
-        "Live in active development at samachr.in",
-      ],
-    },
-  },
-  {
     slug: "rag-study-companion",
-    title: "AI Study Companion",
+    title: "StudyGPT",
     tagline: "RAG chatbot for academic PDF Q&A",
     description:
       "Designed a Retrieval-Augmented Generation (RAG) pipeline for academic PDF Q&A, leveraging embedding models and ChromaDB for high-precision semantic vector search and document retrieval.",
@@ -247,8 +203,9 @@ export const projects: Project[] = [
     featured: true,
     wip: false,
     github: "https://github.com/likhhithh",
+    live: "https://studygpt-3a8q.onrender.com",
     year: "2024",
-    category: "NLP / GenAI",
+    category: "AI / RAG",
     caseStudy: {
       problem:
         "Students struggle to quickly find answers from dense academic PDFs across multiple documents.",
@@ -293,26 +250,31 @@ export const projects: Project[] = [
     },
   },
   {
-    slug: "bfit-fitness-tracker",
-    title: "B-FIT Fitness Tracker",
-    tagline: "MERN stack fitness tracking web application",
+    slug: "samachr-ai",
+    title: "Samachr AI",
+    tagline: "AI-powered news intelligence platform — live at samachr.in",
     description:
-      "Developed a web application for tracking fitness activities with a MERN stack architecture enabling user workout logging and performance tracking.",
-    tech: ["MongoDB", "Express.js", "React.js", "Node.js"],
-    featured: false,
-    wip: false,
-    github: "https://github.com/likhhithh",
-    year: "2024",
-    category: "Full-Stack",
+      "An AI-powered news intelligence platform that aggregates, summarises, and personalises news using large language models. Built with a full-stack architecture, it delivers real-time, context-aware news briefs.",
+    tech: ["Python", "LLMs", "RAG", "FastAPI", "React.js", "Node.js"],
+    featured: true,
+    wip: true,
+    github: undefined,
+    live: "https://www.samachr.in",
+    image: "/samachr-logo.png",
+    year: "2025",
+    category: "AI / Full-Stack",
     caseStudy: {
-      problem: "Fitness enthusiasts lack a simple, self-hosted tool for logging and tracking workouts.",
-      approach: "MERN stack web app with user auth, workout logging, and performance dashboards.",
-      outcome: "Fully functional fitness tracker with workout logging and performance visualisation.",
+      problem:
+        "News consumption is fragmented and overwhelming. Readers spend more time searching than reading.",
+      approach:
+        "Built a full-stack pipeline that ingests, summarises, and personalises news using LLMs and RAG so readers see only what matters to them.",
+      outcome:
+        "Live at samachr.in with real-time news ingestion and LLM-powered summaries.",
       highlights: [
-        "MERN stack: MongoDB, Express.js, React.js, Node.js",
-        "User authentication and session management",
-        "Workout logging with performance tracking",
-        "Responsive UI built with React.js",
+        "LLM-powered abstractive news summarisation",
+        "RAG pipeline for context-aware retrieval",
+        "Full-stack: FastAPI backend + React.js frontend",
+        "Live in active development at samachr.in",
       ],
     },
   },
@@ -345,6 +307,30 @@ export const projects: Project[] = [
       ],
     },
   },
+  {
+    slug: "bfit-fitness-tracker",
+    title: "B-FIT Fitness Tracker",
+    tagline: "MERN stack fitness tracking web application",
+    description:
+      "Developed a web application for tracking fitness activities with a MERN stack architecture enabling user workout logging and performance tracking.",
+    tech: ["MongoDB", "Express.js", "React.js", "Node.js"],
+    featured: false,
+    wip: false,
+    github: "https://github.com/likhhithh",
+    year: "2024",
+    category: "Full-Stack",
+    caseStudy: {
+      problem: "Fitness enthusiasts lack a simple, self-hosted tool for logging and tracking workouts.",
+      approach: "MERN stack web app with user auth, workout logging, and performance dashboards.",
+      outcome: "Fully functional fitness tracker with workout logging and performance visualisation.",
+      highlights: [
+        "MERN stack: MongoDB, Express.js, React.js, Node.js",
+        "User authentication and session management",
+        "Workout logging with performance tracking",
+        "Responsive UI built with React.js",
+      ],
+    },
+  },
 ];
 
 // ── Experience ────────────────────────────────────────────────────────────────
@@ -355,6 +341,7 @@ export interface ExperienceEntry {
   type: string;
   duration: string;
   description: string;
+  highlights?: string[];
   tech: string[];
 }
 
@@ -365,8 +352,43 @@ export const experience: ExperienceEntry[] = [
     type: "Internship",
     duration: "May 2026 – Present",
     description:
-      "Building an enterprise-grade Hybrid RAG Chatbot for Andhra Pradesh Transmission Corporation (APTRANSCO) that lets employees query 10,000+ internal documents — technical manuals, CEA guidelines, HR policies, safety regulations, office orders — in plain English. Designed and implemented a 6-node LangGraph agentic pipeline: a router agent selects relevant Qdrant collections, a retrieval agent fuses dense vector search (Amazon Titan Text V2 embeddings, 1024-dim) with BM25 keyword retrieval via Reciprocal Rank Fusion, a Cohere Rerank v3 cross-encoder reranks the merged results, a verification agent checks answer groundedness (hallucination guard), and a response agent generates structured answers with inline citations. Built a cross-session memory layer backed by a dedicated Qdrant collection — verified Q&A pairs are embedded and stored per user, retrieved at query time (similarity ≥ 0.72, top-4) and injected as supplementary context, enabling context-aware multi-session dialogue with only ~0.3s added latency. The full-stack product features a React 19 + Vite frontend with a 3-panel layout (document navigator, chat, sources), typewriter-animated AI responses, Supabase-backed auth (email/password, magic link, Google OAuth), lazy-loaded conversation history stored in PostgreSQL (RLS-enforced), and a PDF.js viewer that highlights the exact retrieved passage on the source document canvas using fuzzy text matching.",
+      "Built a production Hybrid Agentic RAG system for APTRANSCO serving 10,000+ internal PDFs — the company's entire scanned document base, including manuals, reports, orders, and rules — now actively used by staff.",
+    highlights: [
+      "Designed a multi-agent LangGraph pipeline (Router → Retrieval → Verification → Response) with hybrid vector + BM25 search, CrossEncoder reranking, and hallucination prevention on AWS Bedrock",
+      "Achieved state-of-the-art Faithfulness 0.956 and Hallucination Rate 0.044 through 5 iterative optimization rounds on chunking strategy, reranking thresholds, and prompt engineering",
+      "Improved Faithfulness by +9.9% (0.87 → 0.956) and cut Hallucination by 66% (0.13 → 0.044)",
+      "Pre-built vector embeddings enable zero re-ingestion deployment with instant cold-start, Answer Relevancy 0.706, Hit Rate@5 0.492, and 99.2% uptime",
+    ],
     tech: ["Python", "FastAPI", "LangGraph", "LangChain", "LlamaIndex", "AWS Bedrock", "Amazon Titan", "Qdrant", "BM25", "Cohere Rerank", "React.js", "Vite", "Supabase", "PostgreSQL", "PDF.js"],
+  },
+  {
+    role: "Domain-Specific LLM Fine-Tuning",
+    company: "APTRANSCO",
+    type: "Internship Project",
+    duration: "2026 – Present",
+    description:
+      "Second project under the same AIML internship — building a production-quality pipeline to fine-tune Qwen 3.5 4B on APTRANSCO's internal document base — scanned documents, manuals, reports, and more from across the company — using QLoRA (Quantized Low-Rank Adaptation), making the model domain-aware for company-wide document Q&A.",
+    highlights: [
+      "Built an end-to-end data pipeline — raw PDF/document ingestion, OCR extraction, cleaning, chunking, and instruction-dataset generation",
+      "Configured 4-bit quantization (NF4) with BitsAndBytes and LoRA adapters (rank-64, RSLoRA) targeting all attention and FFN projection layers",
+      "Set up training on AWS EC2 GPU instances (CUDA 12.1, A100-class) with checkpointing and callbacks",
+      "Evaluated model quality using BLEU, ROUGE, BERTScore, perplexity, and latency benchmarks",
+      "Built Hugging Face Hub integration to upload/download/merge LoRA adapters with the base model",
+    ],
+    tech: ["Python", "PyTorch", "Hugging Face Transformers", "PEFT", "QLoRA", "BitsAndBytes", "Qwen 3.5 4B", "AWS EC2", "CUDA", "Hugging Face Hub"],
+  },
+  {
+    role: "Multi-App AI Integration with MCP",
+    company: "APTRANSCO",
+    type: "Internship Project",
+    duration: "2026 – Present",
+    description:
+      "Third project under the same AIML internship — connected two independent AI applications, an AI Translator and an AI Database Assistant, over the Model Context Protocol (MCP) using FastMCP, so a single LLM client can discover and call both apps' capabilities as tools.",
+    highlights: [
+      "Built FastMCP servers exposing each application's features as typed, discoverable MCP tools",
+      "Enabled cross-app workflows through one unified MCP client — e.g. query the database assistant, then translate the results in the same conversation",
+    ],
+    tech: ["Python", "FastMCP", "MCP", "LLMs"],
   },
   {
     role: "Web Development Intern",

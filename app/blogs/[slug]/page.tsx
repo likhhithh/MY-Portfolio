@@ -81,7 +81,7 @@ export default async function BlogPostPage({
                 <p className="text-fg-muted text-sm max-w-xs leading-relaxed">
                   This article is being written. Check back soon — or subscribe via{" "}
                   <a
-                    href={`mailto:malothulikhith@email.com?subject=Notify me about: ${post.title}`}
+                    href={`mailto:malothulikhith@gmail.com?subject=Notify me about: ${post.title}`}
                     className="text-fg underline underline-offset-2"
                   >
                     email

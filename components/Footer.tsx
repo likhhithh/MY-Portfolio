@@ -94,7 +94,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="h-divider mt-10 mb-6" />
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-2 text-xs text-fg-muted">
-          <span>© 2025 Likhith M. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Likhith M. All rights reserved.</span>
           <span>Built with Next.js &amp; Framer Motion</span>
         </div>
       </div>

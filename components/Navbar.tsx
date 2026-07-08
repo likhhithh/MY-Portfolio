@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { navItems, siteConfig } from "@/lib/data";
 import Button from "@/components/ui/Button";
@@ -12,6 +12,8 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
+  const { scrollYProgress } = useScroll();
+  const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30, restDelta: 0.001 });
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -27,6 +29,11 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
+      {/* Scroll progress bar */}
+      <motion.div
+        className="absolute top-0 left-0 right-0 h-[2px] bg-accent origin-left"
+        style={{ scaleX: progress }}
+      />
       <div className="container-main flex items-center justify-between h-16">
         {/* Logo */}
         <Link
@@ -59,7 +66,7 @@ export default function Navbar() {
 
         {/* Right */}
         <div className="flex items-center gap-3">
-          <Button variant="primary" href="mailto:malothulikhith@email.com" size="sm">
+          <Button variant="primary" href={`mailto:${siteConfig.email}`} size="sm">
             Hire Me
           </Button>
           <button
@@ -101,7 +108,7 @@ export default function Navbar() {
                 );
               })}
               <div className="pt-2">
-                <Button variant="primary" href="mailto:malothulikhith@email.com" size="sm">
+                <Button variant="primary" href={`mailto:${siteConfig.email}`} size="sm">
                   Hire Me
                 </Button>
               </div>

@@ -273,6 +273,101 @@ const logos: Record<string, { svg: React.ReactNode; color: string }> = {
       </svg>
     ),
   },
+  finetuning: {
+    color: "#DB2777",
+    svg: (
+      <svg viewBox="0 0 24 24" className="w-full h-full">
+        <rect width="24" height="24" rx="4" fill="#DB2777"/>
+        <path d="M7 6v5M7 15v3M12 6v3M12 13v5M17 6v7M17 17v1" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+        <circle cx="7" cy="13" r="1.8" fill="white"/>
+        <circle cx="12" cy="11" r="1.8" fill="white"/>
+        <circle cx="17" cy="15" r="1.8" fill="white"/>
+      </svg>
+    ),
+  },
+  qlora: {
+    color: "#9333EA",
+    svg: (
+      <svg viewBox="0 0 24 24" className="w-full h-full">
+        <rect width="24" height="24" rx="4" fill="#9333EA"/>
+        <text x="12" y="11" textAnchor="middle" fontSize="7" fontWeight="bold" fill="white">Q</text>
+        <text x="12" y="19" textAnchor="middle" fontSize="6" fontWeight="bold" fill="white">LoRA</text>
+      </svg>
+    ),
+  },
+  peft: {
+    color: "#0EA5E9",
+    svg: (
+      <svg viewBox="0 0 24 24" className="w-full h-full">
+        <rect width="24" height="24" rx="4" fill="#0EA5E9"/>
+        <text x="12" y="16" textAnchor="middle" fontSize="7" fontWeight="bold" fill="white">PEFT</text>
+      </svg>
+    ),
+  },
+  bitsandbytes: {
+    color: "#16A34A",
+    svg: (
+      <svg viewBox="0 0 24 24" className="w-full h-full">
+        <rect width="24" height="24" rx="4" fill="#16A34A"/>
+        <text x="12" y="11" textAnchor="middle" fontSize="7" fontWeight="bold" fill="white">4-bit</text>
+        <text x="12" y="19" textAnchor="middle" fontSize="6" fontWeight="bold" fill="white">NF4</text>
+      </svg>
+    ),
+  },
+  huggingface: {
+    color: "#FFD21E",
+    svg: (
+      <svg viewBox="0 0 24 24" className="w-full h-full">
+        <rect width="24" height="24" rx="4" fill="#FFD21E"/>
+        <text x="12" y="16" textAnchor="middle" fontSize="10" fill="#1a1a1a">🤗</text>
+      </svg>
+    ),
+  },
+  evaluation: {
+    color: "#475569",
+    svg: (
+      <svg viewBox="0 0 24 24" className="w-full h-full">
+        <rect width="24" height="24" rx="4" fill="#475569"/>
+        <path d="M6 18v-6M12 18V6M18 18v-9" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
+      </svg>
+    ),
+  },
+  awsec2: {
+    color: "#FF9900",
+    svg: (
+      <svg viewBox="0 0 24 24" className="w-full h-full">
+        <rect width="24" height="24" rx="4" fill="#FF9900"/>
+        <text x="12" y="16" textAnchor="middle" fontSize="8" fontWeight="bold" fill="white">EC2</text>
+      </svg>
+    ),
+  },
+  mcp: {
+    color: "#1E293B",
+    svg: (
+      <svg viewBox="0 0 24 24" className="w-full h-full">
+        <rect width="24" height="24" rx="4" fill="#1E293B"/>
+        <text x="12" y="16" textAnchor="middle" fontSize="7.5" fontWeight="bold" fill="white">MCP</text>
+      </svg>
+    ),
+  },
+  fastmcp: {
+    color: "#0891B2",
+    svg: (
+      <svg viewBox="0 0 24 24" className="w-full h-full">
+        <rect width="24" height="24" rx="4" fill="#0891B2"/>
+        <path d="M13 4L6 13h4l-1 7 7-9h-4z" fill="white"/>
+      </svg>
+    ),
+  },
+  cuda: {
+    color: "#76B900",
+    svg: (
+      <svg viewBox="0 0 24 24" className="w-full h-full">
+        <rect width="24" height="24" rx="4" fill="#76B900"/>
+        <text x="12" y="15.5" textAnchor="middle" fontSize="6.5" fontWeight="bold" fill="white">CUDA</text>
+      </svg>
+    ),
+  },
 };
 
 // Samachr AI custom logo

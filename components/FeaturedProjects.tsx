@@ -70,13 +70,15 @@ export default function FeaturedProjects() {
               initial={{ opacity: 0, y: 36 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: i * 0.1 }}
-              className="card-base overflow-hidden flex flex-col md:flex-row"
+              className="card-base overflow-hidden flex flex-col md:flex-row group"
             >
               {/* Left — visual */}
               <div
                 className={`relative md:w-64 lg:w-72 aspect-video md:aspect-auto bg-gradient-to-br ${gradients[i % gradients.length]} flex items-center justify-center flex-shrink-0`}
               >
-                <ProjectLogo project={project} />
+                <div className="transition-transform duration-500 ease-out group-hover:scale-110">
+                  <ProjectLogo project={project} />
+                </div>
 
                 {/* WIP badge */}
                 {project.wip && (
@@ -91,7 +93,7 @@ export default function FeaturedProjects() {
               <div className="p-6 md:p-8 flex flex-col flex-1">
                 <div className="flex items-start justify-between gap-3 mb-2">
                   <h3
-                    className="font-bold text-xl text-fg uppercase leading-tight"
+                    className="font-bold text-xl text-fg uppercase leading-tight group-hover:text-accent transition-colors duration-200"
                     style={{ fontFamily: "var(--font-antonio)", letterSpacing: "-0.02em" }}
                   >
                     {project.title}

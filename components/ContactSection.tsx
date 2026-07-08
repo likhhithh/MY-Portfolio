@@ -43,7 +43,7 @@ export default function ContactSection() {
           className="mb-12"
         >
           <p className="eyebrow mb-4">Contact</p>
-          <h2 className="section-heading text-fg">LET&apos;S WORK<br />TOGETHER</h2>
+          <h2 className="section-heading text-fg">LET&apos;S WORK<br /><span className="text-gradient">TOGETHER</span></h2>
           <p className="text-fg-muted text-base max-w-xl mt-4 leading-relaxed">
             Open to internships, research collaborations, and interesting builds. I usually respond within 24 hours.
           </p>
