@@ -403,7 +403,7 @@ export default function TechLogo({ name, logoKey, size = "md" }: TechLogoProps) 
           // Fallback: colored circle with initials
           <div
             className="w-full h-full rounded-lg flex items-center justify-center text-white font-bold text-xs"
-            style={{ background: "#8f8f8f" }}
+            style={{ background: "#2b2d42" }}
           >
             {name.slice(0, 2).toUpperCase()}
           </div>

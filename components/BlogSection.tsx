@@ -6,6 +6,8 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { posts } from "@/lib/data";
 import Button from "@/components/ui/Button";
+import RansomHeading from "@/components/ui/RansomHeading";
+import { PixelDecor } from "@/components/ui/PixelSprite";
 
 const gradients = [
   "from-violet-50 to-indigo-100",
@@ -24,7 +26,8 @@ export default function BlogSection() {
   const preview = posts.slice(0, 2);
 
   return (
-    <section className="bg-bg-alt border-t border-border section-pad">
+    <section id="blog" className="relative isolate overflow-hidden bg-bg-alt border-t border-border section-pad">
+      <PixelDecor variant="blog" />
       <div ref={ref} className="container-main">
 
         {/* Header */}
@@ -36,7 +39,7 @@ export default function BlogSection() {
         >
           <div>
             <p className="eyebrow mb-4">Writing</p>
-            <h2 className="section-heading text-fg">ARTICLES &amp;<br />INSIGHTS</h2>
+            <RansomHeading text={"Articles &\nInsights"} seed={11} />
           </div>
           <div className="hidden md:block">
             <Button variant="outline" href="/blogs">All Posts</Button>

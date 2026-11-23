@@ -6,6 +6,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { posts } from "@/lib/data";
+import RansomHeading from "@/components/ui/RansomHeading";
 
 // Card accent gradients
 const postGradients = [
@@ -60,14 +61,7 @@ export default function BlogsPage() {
             >
               writing
             </motion.p>
-            <motion.h1
-              className="section-heading text-fg"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.08 }}
-            >
-              blog
-            </motion.h1>
+            <RansomHeading as="h1" text={"Blog"} size="clamp(2rem, 5vw, 3.4rem)" seed={8} />
             <motion.p
               className="text-fg-muted text-base max-w-xl mt-4 leading-relaxed"
               initial={{ opacity: 0, y: 16 }}

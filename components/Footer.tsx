@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Mail } from "lucide-react";
 import { navItems, siteConfig, socials } from "@/lib/data";
+import { InstagramIcon } from "@/components/ui/SocialIcons";
 
 const GithubIcon = () => (
   <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
@@ -18,7 +19,7 @@ const LinkedInIcon = () => (
 
 export default function Footer() {
   return (
-    <footer className="bg-bg-alt border-t border-border">
+    <footer className="desk-frame text-[#f3ede1]">
       <div className="container-main section-pad">
         {/* Top grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -26,15 +27,15 @@ export default function Footer() {
           <div>
             <Link
               href="/"
-              className="font-bold text-xl text-fg no-underline uppercase"
+              className="font-bold text-xl text-[#f3ede1] no-underline uppercase"
               style={{ fontFamily: "var(--font-antonio)", letterSpacing: "-0.02em" }}
             >
               {siteConfig.name}
             </Link>
-            <p className="text-sm text-fg-muted mt-3 max-w-xs leading-relaxed">
+            <p className="text-sm text-[#f3ede1]/60 mt-3 max-w-xs leading-relaxed">
               {siteConfig.tagline}
             </p>
-            <div className="mt-4 inline-flex items-center gap-2 text-xs text-fg-muted">
+            <div className="mt-4 inline-flex items-center gap-2 text-xs text-[#f3ede1]/60">
               <span className="w-1.5 h-1.5 rounded-full bg-green animate-pulse" />
               available for work
             </div>
@@ -42,13 +43,13 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <p className="eyebrow mb-4">Navigation</p>
+            <p className="eyebrow !text-mustard mb-4">Navigation</p>
             <ul className="flex flex-col gap-2">
               {navItems.map(({ label, href }) => (
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-sm text-fg-muted hover:text-fg transition-colors no-underline"
+                    className="text-sm text-[#f3ede1]/60 hover:text-mustard transition-colors no-underline"
                   >
                     {label}
                   </Link>
@@ -59,13 +60,13 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <p className="eyebrow mb-4">Get In Touch</p>
+            <p className="eyebrow !text-mustard mb-4">Get In Touch</p>
             <div className="flex gap-3 mb-4">
               <a
                 href={socials.github}
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 rounded-full border border-border flex items-center justify-center text-fg-muted hover:text-accent hover:border-accent transition-colors"
+                className="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-[#f3ede1]/70 hover:text-fg hover:bg-mustard hover:border-mustard transition-colors"
                 aria-label="GitHub"
               >
                 <GithubIcon />
@@ -74,26 +75,35 @@ export default function Footer() {
                 href={socials.linkedin}
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 rounded-full border border-border flex items-center justify-center text-fg-muted hover:text-accent hover:border-accent transition-colors"
+                className="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-[#f3ede1]/70 hover:text-fg hover:bg-mustard hover:border-mustard transition-colors"
                 aria-label="LinkedIn"
               >
                 <LinkedInIcon />
               </a>
               <a
+                href={socials.instagram}
+                target="_blank"
+                rel="noreferrer"
+                className="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-[#f3ede1]/70 hover:text-fg hover:bg-mustard hover:border-mustard transition-colors"
+                aria-label="Instagram"
+              >
+                <InstagramIcon size={15} />
+              </a>
+              <a
                 href={`mailto:${siteConfig.email}`}
-                className="w-9 h-9 rounded-full border border-border flex items-center justify-center text-fg-muted hover:text-accent hover:border-accent transition-colors"
+                className="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-[#f3ede1]/70 hover:text-fg hover:bg-mustard hover:border-mustard transition-colors"
                 aria-label="Email"
               >
                 <Mail size={15} />
               </a>
             </div>
-            <p className="text-sm text-fg-muted">{siteConfig.email}</p>
+            <p className="text-sm text-[#f3ede1]/60">{siteConfig.email}</p>
           </div>
         </div>
 
         {/* Bottom */}
-        <div className="h-divider mt-10 mb-6" />
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-2 text-xs text-fg-muted">
+        <div className="h-px bg-white/10 mt-10 mb-6" />
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-2 text-xs text-[#f3ede1]/60">
           <span>© {new Date().getFullYear()} Likhith M. All rights reserved.</span>
           <span>Built with Next.js &amp; Framer Motion</span>
         </div>

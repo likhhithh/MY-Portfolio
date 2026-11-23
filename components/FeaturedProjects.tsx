@@ -5,6 +5,8 @@ import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { projects } from "@/lib/data";
 import Button from "@/components/ui/Button";
+import RansomHeading from "@/components/ui/RansomHeading";
+import { PixelDecor } from "@/components/ui/PixelSprite";
 
 const gradients = [
   "from-violet-100 via-indigo-50 to-blue-100",
@@ -43,7 +45,8 @@ export default function FeaturedProjects() {
   const featured = projects.filter((p) => p.featured);
 
   return (
-    <section className="bg-bg-alt border-t border-border section-pad">
+    <section id="projects" className="relative isolate overflow-hidden bg-bg-alt border-t border-border section-pad">
+      <PixelDecor variant="projects" />
       <div ref={ref} className="container-main">
 
         {/* Header */}
@@ -55,7 +58,7 @@ export default function FeaturedProjects() {
         >
           <div>
             <p className="eyebrow mb-4">Portfolio</p>
-            <h2 className="section-heading text-fg">FEATURED PROJECTS</h2>
+            <RansomHeading text="Featured projects" seed={9} />
           </div>
           <div className="hidden md:block">
             <Button variant="outline" href="/projects">Browse All</Button>

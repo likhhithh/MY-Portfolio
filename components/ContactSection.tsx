@@ -5,6 +5,9 @@ import { motion, useInView } from "framer-motion";
 import { ArrowUpRight, ExternalLink, Mail, MapPin } from "lucide-react";
 import { siteConfig, socials } from "@/lib/data";
 import Button from "@/components/ui/Button";
+import { InstagramIcon } from "@/components/ui/SocialIcons";
+import RansomHeading from "@/components/ui/RansomHeading";
+import { PixelDecor } from "@/components/ui/PixelSprite";
 
 const GithubIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
@@ -23,6 +26,7 @@ const LinkedInIcon = () => (
 const socialLinks = [
   { icon: <GithubIcon />, href: socials.github, label: "GitHub", sub: "@likhhithh" },
   { icon: <LinkedInIcon />, href: socials.linkedin, label: "LinkedIn", sub: "likhithmalothu01" },
+  { icon: <InstagramIcon size={16} />, href: socials.instagram, label: "Instagram", sub: "@likkhithhh" },
   { icon: <Mail size={16} />, href: `mailto:${siteConfig.email}`, label: "Email", sub: siteConfig.email },
   { icon: <ExternalLink size={16} />, href: "https://www.samachr.in", label: "Samachr AI", sub: "www.samachr.in · Live" },
 ];
@@ -32,7 +36,8 @@ export default function ContactSection() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="bg-bg border-t border-border section-pad">
+    <section id="contact" className="relative isolate overflow-hidden bg-bg border-t border-border section-pad">
+      <PixelDecor variant="contact" />
       <div ref={ref} className="container-main">
 
         {/* Header */}
@@ -43,7 +48,7 @@ export default function ContactSection() {
           className="mb-12"
         >
           <p className="eyebrow mb-4">Contact</p>
-          <h2 className="section-heading text-fg">LET&apos;S WORK<br /><span className="text-gradient">TOGETHER</span></h2>
+          <RansomHeading text={"Let's work\ntogether"} seed={3} />
           <p className="text-fg-muted text-base max-w-xl mt-4 leading-relaxed">
             Open to internships, research collaborations, and interesting builds. I usually respond within 24 hours.
           </p>
@@ -57,7 +62,7 @@ export default function ContactSection() {
             initial={{ opacity: 0, x: -30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-            className="card-base bg-accent p-8 md:p-10"
+            className="card-base taped desk-frame !border-transparent hover:!shadow-[5px_5px_0_#b8336a] p-8 md:p-10"
           >
             <div className="inline-flex items-center gap-2 border border-white/20 bg-white/10 text-white text-xs rounded-full px-4 py-2 mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-green animate-pulse flex-shrink-0" />
@@ -99,7 +104,7 @@ export default function ContactSection() {
                 transition={{ duration: 0.4, delay: 0.3 + i * 0.07, ease: [0.22, 1, 0.36, 1] }}
                 className="card-base bg-card px-5 py-4 flex items-center gap-4 group no-underline hover:border-accent transition-colors duration-200"
               >
-                <div className="w-9 h-9 rounded-full bg-bg-alt flex items-center justify-center text-fg flex-shrink-0 group-hover:bg-accent group-hover:text-white transition-colors duration-200">
+                <div className="w-9 h-9 rounded-full bg-bg-alt flex items-center justify-center text-fg flex-shrink-0 group-hover:bg-mustard group-hover:text-fg transition-colors duration-200">
                   {icon}
                 </div>
                 <div className="flex-1 min-w-0">

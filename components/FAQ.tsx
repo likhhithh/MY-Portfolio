@@ -4,6 +4,8 @@ import { useRef, useState } from "react";
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import { faqs, siteConfig } from "@/lib/data";
 import Button from "@/components/ui/Button";
+import RansomHeading from "@/components/ui/RansomHeading";
+import { PixelDecor } from "@/components/ui/PixelSprite";
 
 export default function FAQ() {
   const ref = useRef<HTMLDivElement>(null);
@@ -11,7 +13,8 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="bg-bg border-t border-border section-pad">
+    <section id="faq" className="relative isolate overflow-hidden bg-bg border-t border-border section-pad">
+      <PixelDecor variant="faq" />
       <div ref={ref} className="container-main">
 
         {/* Header */}
@@ -22,7 +25,7 @@ export default function FAQ() {
           className="mb-12"
         >
           <p className="eyebrow mb-4">FAQ</p>
-          <h2 className="section-heading text-fg">FREQUENTLY ASKED<br />QUESTIONS</h2>
+          <RansomHeading text={"Frequently asked\nquestions"} seed={7} />
         </motion.div>
 
         {/* Two-column: sticky sidebar + accordion */}

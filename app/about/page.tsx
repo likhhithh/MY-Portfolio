@@ -15,6 +15,7 @@ import {
   highlights,
   skillCategories,
 } from "@/lib/data";
+import RansomHeading from "@/components/ui/RansomHeading";
 
 function FadeUp({
   children,
@@ -56,16 +57,7 @@ export default function AboutPage() {
             >
               about me
             </motion.p>
-            <motion.h1
-              className="section-heading text-fg"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.08 }}
-            >
-              the person
-              <br />
-              behind the work
-            </motion.h1>
+            <RansomHeading as="h1" text={"The person\nbehind the work"} size="clamp(2rem, 5vw, 3.4rem)" seed={4} />
             <motion.p
               className="text-fg-muted text-base max-w-xl mt-4 leading-relaxed"
               initial={{ opacity: 0, y: 16 }}

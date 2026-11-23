@@ -6,13 +6,16 @@ import { aboutText, highlights, metrics, siteConfig, socials } from "@/lib/data"
 import Button from "@/components/ui/Button";
 import CountUp from "@/components/ui/CountUp";
 import Image from "next/image";
+import RansomHeading from "@/components/ui/RansomHeading";
+import { PixelDecor } from "@/components/ui/PixelSprite";
 
 export default function AboutSection() {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="bg-bg-alt border-t border-border section-pad">
+    <section id="about" className="relative isolate overflow-hidden bg-bg-alt border-t border-border section-pad">
+      <PixelDecor variant="about" />
       <div ref={ref} className="container-main">
 
         {/* Header */}
@@ -23,7 +26,7 @@ export default function AboutSection() {
           className="mb-14"
         >
           <p className="eyebrow mb-4">Get to know me</p>
-          <h2 className="section-heading text-fg">ABOUT ME</h2>
+          <RansomHeading text="About me" seed={1} />
         </motion.div>
 
         {/* Three-column layout: photo | text | stats */}

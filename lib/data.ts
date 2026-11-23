@@ -3,9 +3,9 @@
 export const siteConfig = {
   name: "Likhith M",
   fullName: "Malothu Likhith",
-  title: "Electrical Engineer | ML & AI Enthusiast",
-  tagline: "Building intelligent systems at the intersection of Machine Learning and Electrical Engineering.",
-  description: "I'm a final year Electrical Engineering student with a Minor in Computer Science and a deep passion for Machine Learning and Artificial Intelligence. I enjoy bridging the gap between hardware and intelligent software — from designing control systems to building ML pipelines that solve real-world problems.",
+  title: "AI/ML Engineer · B.Tech @ IIT Bhilai",
+  tagline: "I build AI systems people actually use — agentic RAG, multi-agent LLM orchestration, and ML pipelines.",
+  description: "B.Tech student at IIT Bhilai who builds AI systems people actually use. At APTRANSCO, I shipped an agentic RAG assistant over 10,000+ documents that staff rely on daily, measured with RAGAS. I also built OrchestrAI, a multi-agent LLM orchestration platform with cost-aware model routing.",
   email: "malothulikhith@gmail.com",
   location: "India",
   availableForWork: true,
@@ -23,6 +23,7 @@ export const navItems = [
 export const socials = {
   github:   "https://github.com/likhhithh",
   linkedin: "https://linkedin.com/in/likhithmalothu01",
+  instagram: "https://www.instagram.com/likkhithhh/",
   email:    "malothulikhith@gmail.com",
   twitter:  "",
 };
@@ -40,14 +41,14 @@ export const heroStats = [
 // ── About ─────────────────────────────────────────────────────────────────────
 
 export const aboutText = [
-  "I'm a final year Electrical Engineering student with a Minor in Computer Science and a deep passion for Machine Learning and Artificial Intelligence.",
-  "I enjoy bridging the gap between hardware and intelligent software — from designing control systems to building ML pipelines that solve real-world problems. I've worked on projects spanning RAG pipelines, generative AI, computer vision, and predictive modelling.",
+  "I'm a B.Tech Electrical Engineering student at IIT Bhilai with a Minor in Computer Science from IIT Mandi, and I build AI systems people actually use.",
+  "At APTRANSCO I shipped a Hybrid Agentic RAG assistant over 10,000+ internal documents that staff rely on daily — measured with RAGAS and improved through data-driven iteration. I also built OrchestrAI, a 10-agent LLM orchestration platform with cost-aware routing across 11 models, plus ML projects in forecasting and anomaly detection.",
 ];
 
 export const highlights = [
-  "B.Tech in Electrical & Electronics Engineering + Minor in Computer Science",
-  "Passionate about AI/ML, Deep Learning & GenAI",
-  "Built production RAG systems, agentic pipelines & LLM-powered apps",
+  "B.Tech in Electrical Engineering (IIT Bhilai) + Minor in Computer Science (IIT Mandi)",
+  "Shipped an agentic RAG assistant used daily by APTRANSCO staff (Faithfulness 0.956)",
+  "Built multi-agent LLM systems, data pipelines (Spark, NiFi) & ML forecasting models",
 ];
 
 export const metrics = [
@@ -74,6 +75,7 @@ export const skillCategories: SkillCategory[] = [
     category: "Programming",
     skills: [
       { name: "Python",      logo: "python" },
+      { name: "SQL",         logo: "sql" },
       { name: "C++",         logo: "cpp" },
       { name: "C",           logo: "c" },
       { name: "JavaScript",  logo: "javascript" },
@@ -83,6 +85,7 @@ export const skillCategories: SkillCategory[] = [
     category: "Machine Learning",
     skills: [
       { name: "Scikit-learn", logo: "scikitlearn" },
+      { name: "XGBoost",      logo: "xgboost" },
       { name: "Pandas",       logo: "pandas" },
       { name: "NumPy",        logo: "numpy" },
       { name: "OpenCV",       logo: "opencv" },
@@ -109,6 +112,11 @@ export const skillCategories: SkillCategory[] = [
       { name: "LangGraph",         logo: "langgraph" },
       { name: "LlamaIndex",        logo: "llamaindex" },
       { name: "RAG",               logo: "rag" },
+      { name: "Agentic RAG",       logo: "rag" },
+      { name: "Multi-Agent Systems", logo: "multiagent" },
+      { name: "LangSmith",         logo: "langsmith" },
+      { name: "RAGAS",             logo: "ragas" },
+      { name: "Claude API",        logo: "claude" },
       { name: "MCP",               logo: "mcp" },
       { name: "FastMCP",           logo: "fastmcp" },
     ],
@@ -125,6 +133,16 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
+    category: "Data Engineering",
+    skills: [
+      { name: "Apache Spark", logo: "spark" },
+      { name: "Apache NiFi",  logo: "nifi" },
+      { name: "AWS S3",       logo: "awss3" },
+      { name: "ETL Pipelines", logo: "etl" },
+      { name: "Watchdog",     logo: "watchdog" },
+    ],
+  },
+  {
     category: "Vector Databases",
     skills: [
       { name: "Qdrant",   logo: "qdrant" },
@@ -136,6 +154,7 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: "AWS Bedrock",    logo: "awsbedrock" },
       { name: "AWS EC2",        logo: "awsec2" },
+      { name: "AWS S3",         logo: "awss3" },
       { name: "Amazon Titan",   logo: "amazontitan" },
       { name: "Cohere",         logo: "cohere" },
       { name: "CUDA",           logo: "cuda" },
@@ -150,13 +169,16 @@ export const skillCategories: SkillCategory[] = [
       { name: "Jupyter",         logo: "jupyter" },
       { name: "Google Colab",    logo: "colab" },
       { name: "Linux",           logo: "linux" },
-      { name: "Apache Spark",    logo: "spark" },
+      { name: "Docker",          logo: "docker" },
+      { name: "Postman",         logo: "postman" },
     ],
   },
   {
     category: "Web & Backend",
     skills: [
       { name: "FastAPI",    logo: "fastapi" },
+      { name: "asyncio",    logo: "asyncio" },
+      { name: "Next.js",    logo: "nextjs" },
       { name: "React.js",   logo: "react" },
       { name: "Node.js",    logo: "nodejs" },
       { name: "MongoDB",    logo: "mongodb" },
@@ -194,11 +216,38 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: "orchestrai",
+    title: "OrchestrAI",
+    tagline: "Multi-agent LLM orchestration & RAG with cost-aware model routing",
+    description:
+      "A multi-agent LLM system of 10 agents on a custom async DAG engine, with hybrid RAG, SELECT-only text-to-SQL, and a cost-aware router that picks the cheapest capable model out of 11 LLMs.",
+    tech: ["Python", "FastAPI", "Claude API", "AWS Bedrock", "asyncio", "BM25", "SSE"],
+    featured: true,
+    wip: false,
+    year: "2026",
+    category: "AI / Multi-Agent",
+    caseStudy: {
+      problem:
+        "Teams want to use many LLMs, but routing every task to the biggest model is slow and expensive — and confidential data must never leave self-hosted infrastructure.",
+      approach:
+        "Built a custom async DAG engine running 10 agents in parallel with retries, timeouts and partial results, plus hybrid RAG (BM25 + dense embeddings merged via Reciprocal Rank Fusion) and a SELECT-only text-to-SQL agent. A cost-aware router chooses among 11 LLMs (Claude, Bedrock, local) by task complexity, accuracy needs and privacy rules.",
+      outcome:
+        "A production-style orchestration platform with LLM safety checks, source-grounded citations, per-run token/cost/latency tracing over SSE streaming, and 25 automated tests.",
+      highlights: [
+        "10 agents on a custom async DAG engine — parallel execution, retries, timeouts, partial results",
+        "Cost-aware router across 11 LLMs; confidential data goes only to self-hosted models",
+        "Hybrid RAG: BM25 + dense embeddings merged via Reciprocal Rank Fusion",
+        "LLM safety checks for prompt injection, PII and secrets",
+        "Per-run token / cost / latency tracing with SSE streaming; 25 automated tests",
+      ],
+    },
+  },
+  {
     slug: "rag-study-companion",
     title: "StudyGPT",
-    tagline: "RAG chatbot for academic PDF Q&A",
+    tagline: "RAG-based student Q&A chatbot over 680+ college documents",
     description:
-      "Designed a Retrieval-Augmented Generation (RAG) pipeline for academic PDF Q&A, leveraging embedding models and ChromaDB for high-precision semantic vector search and document retrieval.",
+      "A RAG chatbot over 680+ college documents with semantic chunking, memory and caching — ~85% answer accuracy, ~30% lower latency and ~25% better retrieval precision, refactored into a modular, provider-agnostic architecture.",
     tech: ["Python", "LangChain", "ChromaDB", "Hugging Face", "FastAPI", "Streamlit"],
     featured: true,
     wip: false,
@@ -212,22 +261,22 @@ export const projects: Project[] = [
       approach:
         "RAG pipeline with ChromaDB vector store, semantic chunking, and HuggingFace embeddings for precise document retrieval.",
       outcome:
-        "High-precision Q&A over academic documents with source citations returned alongside answers.",
+        "~85% answer accuracy over 680+ documents, with ~30% lower latency and ~25% better retrieval precision.",
       highlights: [
-        "ChromaDB vector store with semantic chunking",
-        "HuggingFace embedding models for retrieval",
-        "FastAPI backend + Streamlit chat interface",
-        "Source-cited answers with page-level provenance",
+        "RAG over 680+ college documents with semantic chunking",
+        "Conversation memory and response caching (~30% lower latency)",
+        "~25% better retrieval precision; ~85% answer accuracy",
+        "Modular, provider-agnostic architecture (FastAPI + LangChain + ChromaDB)",
       ],
     },
   },
   {
     slug: "solar-panel-rul",
     title: "SolarSense",
-    tagline: "ML pipeline to predict remaining useful life of solar panels",
+    tagline: "Solar panel efficiency detection, degradation forecasting & remaining-life estimation",
     description:
-      "Developed an ML pipeline to predict the remaining useful life of solar panels using time-series data and regression models. Implemented feature engineering and model evaluation techniques to improve prediction accuracy.",
-    tech: ["Python", "Scikit-learn", "Pandas", "NumPy", "Matplotlib"],
+      "Analysed 2–3 years of IV-curve data from 7 panels to forecast 10-year degradation and remaining useful life. An XGBoost Pmax model reached R² ≈ 0.87, and an Isolation Forest + rule-based detector flags anomalous readings.",
+    tech: ["Python", "Pandas", "XGBoost", "Scikit-learn", "FastAPI", "Next.js", "Docker"],
     featured: true,
     wip: false,
     github: "https://github.com/likhhithh",
@@ -236,16 +285,16 @@ export const projects: Project[] = [
     category: "ML / Data Science",
     caseStudy: {
       problem:
-        "Solar panel degradation is unpredictable, causing unexpected failures and maintenance costs.",
+        "Solar panel degradation is unpredictable, causing unexpected failures and maintenance costs — and raw IV-curve data means little to non-technical owners.",
       approach:
-        "Time-series feature engineering + regression models trained on panel telemetry data to predict RUL.",
+        "Engineered 16 features from 2–3 years of IV-curve data across 7 panels, trained an XGBoost Pmax model (tuned with GridSearchCV), and defined a remaining-life metric (80% of rated capacity as end-of-life) with colour-coded health zones.",
       outcome:
-        "Improved prediction accuracy through systematic feature engineering and model evaluation.",
+        "R² ≈ 0.87 with ~18% lower RMSE, 10-year degradation forecasts, and anomaly flags on ~5% of readings — shipped with a batch CSV/Excel upload pipeline.",
       highlights: [
-        "Time-series feature engineering on panel telemetry",
-        "Multiple regression models evaluated (Linear, RF, XGBoost)",
-        "Pandas + NumPy data pipeline",
-        "Matplotlib visualisations for model insights",
+        "16 engineered features; XGBoost Pmax model R² ≈ 0.87, RMSE cut ~18% via GridSearchCV",
+        "10-year degradation forecast + remaining-useful-life metric with colour-coded zones",
+        "Isolation Forest + rule-based anomaly detector flagging ~5% of readings",
+        "Batch CSV/Excel upload pipeline, deployed with Docker on Render",
       ],
     },
   },
@@ -347,25 +396,26 @@ export interface ExperienceEntry {
 
 export const experience: ExperienceEntry[] = [
   {
-    role: "AIML Intern",
-    company: "APTRANSCO",
+    role: "AI/ML Intern",
+    company: "APTRANSCO (Andhra Pradesh Transmission Corporation)",
     type: "Internship",
-    duration: "May 2026 – Present",
+    duration: "May 2026 – Nov 2026",
     description:
-      "Built a production Hybrid Agentic RAG system for APTRANSCO serving 10,000+ internal PDFs — the company's entire scanned document base, including manuals, reports, orders, and rules — now actively used by staff.",
+      "Built a Hybrid Agentic RAG system over 10,000+ internal PDFs — manuals, reports, orders and rules — used daily by APTRANSCO staff to get answers from large-scale document data.",
     highlights: [
-      "Designed a multi-agent LangGraph pipeline (Router → Retrieval → Verification → Response) with hybrid vector + BM25 search, CrossEncoder reranking, and hallucination prevention on AWS Bedrock",
-      "Achieved state-of-the-art Faithfulness 0.956 and Hallucination Rate 0.044 through 5 iterative optimization rounds on chunking strategy, reranking thresholds, and prompt engineering",
-      "Improved Faithfulness by +9.9% (0.87 → 0.956) and cut Hallucination by 66% (0.13 → 0.044)",
-      "Pre-built vector embeddings enable zero re-ingestion deployment with instant cold-start, Answer Relevancy 0.706, Hit Rate@5 0.492, and 99.2% uptime",
+      "Multi-agent LangGraph + LangChain pipeline with hybrid vector + BM25 search, CrossEncoder reranking and AWS Bedrock",
+      "Defined and tracked quality metrics with a RAGAS evaluation suite and traced runs with LangSmith; 5 data-driven iteration rounds lifted Faithfulness +9.9% (0.87 → 0.956) and cut Hallucination Rate by 66% (0.13 → 0.044)",
+      "Built scalable ingestion pipelines with Apache Spark; used Apache NiFi to integrate AWS S3 data flows and automated Gmail/Google Drive ingestion (100% OAuth refresh success)",
+      "Added a Watchdog file-watcher that auto-ingests new files; pre-built embeddings enabled zero re-ingestion and 99.2% uptime",
+      "Turned staff feedback and usage patterns into prioritised, metric-backed improvements (Answer Relevancy 0.706, Hit Rate@5 0.492 monitored throughout)",
     ],
-    tech: ["Python", "FastAPI", "LangGraph", "LangChain", "LlamaIndex", "AWS Bedrock", "Amazon Titan", "Qdrant", "BM25", "Cohere Rerank", "React.js", "Vite", "Supabase", "PostgreSQL", "PDF.js"],
+    tech: ["Python", "FastAPI", "LangGraph", "LangChain", "LangSmith", "RAGAS", "AWS Bedrock", "Qdrant", "BM25", "CrossEncoder", "Apache Spark", "Apache NiFi", "AWS S3", "Watchdog"],
   },
   {
     role: "Domain-Specific LLM Fine-Tuning",
     company: "APTRANSCO",
     type: "Internship Project",
-    duration: "2026 – Present",
+    duration: "2026",
     description:
       "Second project under the same AIML internship — building a production-quality pipeline to fine-tune Qwen 3.5 4B on APTRANSCO's internal document base — scanned documents, manuals, reports, and more from across the company — using QLoRA (Quantized Low-Rank Adaptation), making the model domain-aware for company-wide document Q&A.",
     highlights: [
@@ -381,7 +431,7 @@ export const experience: ExperienceEntry[] = [
     role: "Multi-App AI Integration with MCP",
     company: "APTRANSCO",
     type: "Internship Project",
-    duration: "2026 – Present",
+    duration: "2026",
     description:
       "Third project under the same AIML internship — connected two independent AI applications, an AI Translator and an AI Database Assistant, over the Model Context Protocol (MCP) using FastMCP, so a single LLM client can discover and call both apps' capabilities as tools.",
     highlights: [
@@ -391,21 +441,21 @@ export const experience: ExperienceEntry[] = [
     tech: ["Python", "FastMCP", "MCP", "LLMs"],
   },
   {
-    role: "Web Development Intern",
+    role: "Web Developer Intern",
     company: "Basil Infotech Pvt Ltd",
     type: "Internship",
-    duration: "May 2025 – August 2025",
+    duration: "May 2025 – Aug 2025",
     description:
-      "Built a Smart Hospital Management System (MERN stack) with real-time ambulance tracking, doctor booking, and prescription management for 200+ records.",
+      "Built a MERN hospital management platform (200+ records) with analytics dashboards powered by MongoDB aggregation pipelines, RESTful APIs, optimised queries, and reusable React.js components for real-time ambulance tracking and appointment visibility.",
     tech: ["MongoDB", "Express.js", "React.js", "Node.js"],
   },
 ];
 
 export const education = [
   {
-    degree: "B.Tech — Electrical & Electronics Engineering",
+    degree: "B.Tech — Electrical Engineering",
     institution: "Indian Institute of Technology (IIT) — Bhilai",
-    duration: "2022 – 2027",
+    duration: "2023 – 2027",
     gpa: "",
   },
   {
@@ -414,6 +464,15 @@ export const education = [
     duration: "2025 – 2026",
     gpa: "",
   },
+];
+
+export const coursework = ["Data Structures & Algorithms", "DBMS", "System Design", "Operating Systems", "Computer Networks"];
+
+export const achievements = [
+  { title: "Adobe Hackathon", detail: "Round 1" },
+  { title: "Flipkart GRiD 6.0", detail: "Level 1" },
+  { title: "Convener", detail: "Prayatna 8.0 Sports Fest" },
+  { title: "Team Member", detail: "MERAZ Cultural Fest" },
 ];
 
 // ── FAQs ──────────────────────────────────────────────────────────────────────
@@ -437,12 +496,12 @@ export const faqs: FAQ[] = [
   {
     question: "What's your strongest technical area?",
     answer:
-      "Machine Learning and GenAI — specifically building RAG pipelines, fine-tuning LLMs, and productionising ML models with FastAPI. I also have a solid foundation in data engineering with Pandas, NumPy, and Scikit-learn.",
+      "Applied AI — agentic RAG, multi-agent LLM orchestration and evaluation (RAGAS, LangSmith), and productionising models with FastAPI. I also do data engineering (Apache Spark, NiFi, AWS S3) and classic ML (XGBoost, Scikit-learn) for forecasting and anomaly detection.",
   },
   {
     question: "Do you have industry experience?",
     answer:
-      "Yes — I interned at Basil Infotech Pvt Ltd where I built a Smart Hospital Management System using the MERN stack, handling real-time ambulance tracking and prescription management for 200+ records.",
+      "Yes — as an AI/ML Intern at APTRANSCO (May–Nov 2026) I shipped a Hybrid Agentic RAG assistant over 10,000+ internal documents that staff use daily. Before that, at Basil Infotech, I built a MERN hospital management platform with analytics dashboards and real-time ambulance tracking.",
   },
   {
     question: "How quickly do you respond to messages?",

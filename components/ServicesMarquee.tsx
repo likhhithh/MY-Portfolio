@@ -4,13 +4,16 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { skillCategories } from "@/lib/data";
 import TechLogo from "@/components/ui/TechLogo";
+import RansomHeading from "@/components/ui/RansomHeading";
+import { PixelDecor } from "@/components/ui/PixelSprite";
 
 export default function SkillsSection() {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="bg-bg border-t border-border section-pad">
+    <section id="skills" className="relative isolate overflow-hidden bg-bg border-t border-border section-pad">
+      <PixelDecor variant="skills" />
       <div ref={ref} className="container-main">
 
         {/* Header */}
@@ -21,7 +24,7 @@ export default function SkillsSection() {
           className="mb-14"
         >
           <p className="eyebrow mb-4">Technologies</p>
-          <h2 className="section-heading text-fg">SKILLS &amp; TOOLS</h2>
+          <RansomHeading text="Skills & tools" seed={5} />
         </motion.div>
 
         {/* Categories */}

@@ -7,6 +7,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { projects } from "@/lib/data";
+import RansomHeading from "@/components/ui/RansomHeading";
 
 // Per-index gradient backgrounds for project cards
 const cardGradients = [
@@ -66,14 +67,7 @@ export default function ProjectsPage() {
             >
               portfolio
             </motion.p>
-            <motion.h1
-              className="section-heading text-fg"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.08 }}
-            >
-              all projects
-            </motion.h1>
+            <RansomHeading as="h1" text={"All projects"} size="clamp(2rem, 5vw, 3.4rem)" seed={6} />
             <motion.p
               className="text-fg-muted text-base max-w-xl mt-4 leading-relaxed"
               initial={{ opacity: 0, y: 16 }}

@@ -2,7 +2,9 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { experience, education } from "@/lib/data";
+import { experience, education, coursework, achievements } from "@/lib/data";
+import RansomHeading from "@/components/ui/RansomHeading";
+import { PixelDecor } from "@/components/ui/PixelSprite";
 
 function FadeUp({
   children,
@@ -27,11 +29,12 @@ function FadeUp({
 
 export default function ExperienceSection() {
   return (
-    <section className="section-pad bg-bg-alt border-t border-border">
+    <section id="experience" className="relative isolate overflow-hidden section-pad bg-bg-alt border-t border-border">
+      <PixelDecor variant="experience" />
       <div className="container-main">
         <FadeUp>
           <p className="eyebrow mb-3">experience</p>
-          <h2 className="section-heading text-fg mb-12">work &amp; education</h2>
+          <RansomHeading text="Work & education" className="mb-12" seed={13} />
         </FadeUp>
 
         {/* Experience timeline */}
@@ -46,7 +49,7 @@ export default function ExperienceSection() {
                   {/* Timeline dot */}
                   <span className="hidden md:block absolute -left-10 top-7 w-[11px] h-[11px] rounded-full bg-accent ring-4 ring-accent/15" />
 
-                  <div className="card-base bg-card p-6 md:p-8 hover:border-accent/40 transition-colors duration-300">
+                  <div className="card-base taped bg-card p-6 md:p-8">
                     <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
                       <div>
                         <h3
@@ -101,7 +104,7 @@ export default function ExperienceSection() {
         <div className="grid md:grid-cols-2 gap-4">
           {education.map((edu, i) => (
             <FadeUp key={i} delay={i * 0.08}>
-              <div className="card-base bg-card p-6 h-full hover:border-accent/40 transition-colors duration-300">
+              <div className="card-base bg-card p-6 h-full">
                 <div className="flex flex-col gap-1">
                   <h3
                     className="font-bold text-lg text-fg uppercase leading-tight"
@@ -119,6 +122,32 @@ export default function ExperienceSection() {
                     )}
                   </div>
                 </div>
+              </div>
+            </FadeUp>
+          ))}
+        </div>
+
+        <FadeUp>
+          <p className="text-sm text-fg-muted mt-5">
+            <span className="text-fg font-medium">Coursework:</span> {coursework.join(" · ")}
+          </p>
+        </FadeUp>
+
+        {/* Certificates & positions of responsibility */}
+        <FadeUp>
+          <p className="eyebrow mt-12 mb-5">certificates &amp; roles</p>
+        </FadeUp>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {achievements.map((a, i) => (
+            <FadeUp key={a.title} delay={i * 0.06}>
+              <div className="card-base bg-card p-5 h-full" style={{ transform: `rotate(${[-1, 0.8, -0.6, 1][i % 4]}deg)` }}>
+                <p
+                  className="font-bold text-base text-fg uppercase leading-tight"
+                  style={{ fontFamily: "var(--font-antonio)", letterSpacing: "-0.01em" }}
+                >
+                  {a.title}
+                </p>
+                <p className="text-fg-muted text-xs mt-1">{a.detail}</p>
               </div>
             </FadeUp>
           ))}

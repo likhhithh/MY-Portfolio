@@ -6,6 +6,7 @@ import { metrics } from "@/lib/data";
 
 const testimonials: { name: string; role: string; body: string; quote: string; company: string }[] = [];
 import CountUp from "@/components/ui/CountUp";
+import RansomHeading from "@/components/ui/RansomHeading";
 
 export default function Testimonials() {
   const ref = useRef<HTMLDivElement>(null);
@@ -23,7 +24,7 @@ export default function Testimonials() {
           className="mb-12"
         >
           <p className="eyebrow mb-4">Testimonials</p>
-          <h2 className="section-heading text-fg">WHAT MY CLIENTS SAY</h2>
+          <RansomHeading text="What people say" seed={2} />
         </motion.div>
 
         {/* Testimonial cards */}
@@ -34,7 +35,7 @@ export default function Testimonials() {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: i * 0.08 }}
-              className="card-base bg-card p-6 md:p-8"
+              className="card-base taped bg-card p-6 md:p-8"
             >
               {/* Quote mark */}
               <div
